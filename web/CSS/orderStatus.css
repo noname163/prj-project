@@ -1,0 +1,44 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 24, 2022, 2:15:16 PM
+    Author     : ADMIN
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+.topOrder{
+    background-color: red;
+    display: inline-block;
+    width: 100vw;
+}
+.searchTitle{
+    display: block;
+    background-color: palegoldenrod;
+    float: left;
+}
+.searchOrder{
+    display: contents;
+    background-color: lawngreen;
+    float: left;
+}
+.midOrder{
+    display: inline-block;
+    background-color: darkgoldenrod; 
+    border: solid 2px black;
+    text-align: center;
+    border-radius: 0.5em;
+    width: 51em;
+}
+.orderInfor{
+    display: inline-block;
+    float: left;    
+    background-color: gold;
+    margin-left: 2em;
+    text-align: center;
+}
+.botOrder{
+    display: block;
+    background-color: pink;
+}
