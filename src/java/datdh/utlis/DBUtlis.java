@@ -20,6 +20,10 @@ public class DBUtlis {
     private final String instance = "";
     private final String userName = "admin";
     private final String pass = "dat163163";
+    String url = "jdbc:mysql://localhost:3306/PlantShop?useSSL=false&autoReconnect=true";
+    String usernameForMySql = "root";
+    String passwordForMySql = "root";
+    private Connection connection;
 
     public Connection getConnection() throws ClassNotFoundException, SQLException {
 //        String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + "\\"
@@ -30,17 +34,17 @@ public class DBUtlis {
 //        }
 //        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 //        return DriverManager.getConnection(url, userName, pass);
-        String url = "jdbc:mysql://localhost:3306/PlantShop";
-        String username = "root";
-        String password = "root";
+
+   
+        
 
         System.out.println("Connecting database...");
 
         try ( 
-            Connection connection = DriverManager.getConnection(url, username, password)) {
+            Connection connection1 = DriverManager.getConnection(url, usernameForMySql, passwordForMySql)) {
             System.out.println("Database connected!");
-            Class.forName("com.mysql.jdbc.Driver");
-            return connection;
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return connection1;
         } catch (SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
@@ -49,6 +53,9 @@ public class DBUtlis {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         DBUtlis a = new DBUtlis();
+        
+        
         System.out.println(a.getConnection());
+ 
     }
 }

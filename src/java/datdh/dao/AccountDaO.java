@@ -27,12 +27,13 @@ public class AccountDaO {
             if (cn != null) {
                 String slq = "insert into Accounts values(?,?,?,?,1,1,null);";
                 PreparedStatement st = cn.prepareStatement(slq);
+                
                 st.setString(1, email);
                 st.setString(2, password);
                 st.setString(3, fullname);
                 st.setString(4, phone);
                 st.executeUpdate();
-                cn.close();
+//                cn.close();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,9 +57,9 @@ public class AccountDaO {
                     acc = new Account(rs.getInt("accID"), rs.getString("email"), rs.getString("password"), rs.getString("fullname"), rs.getInt("role"), rs.getString("phone"), rs.getInt("status"));
                 }
 
-                if (!rs.next()) {
-                    cn.close();
-                }
+//                if (!rs.next()) {
+//                    cn.close();
+//                }
             }
         } catch (Exception e) {
             System.out.println("erros");
@@ -77,14 +78,11 @@ public class AccountDaO {
                 PreparedStatement pst = cn.prepareStatement(sql);
                 pst.setString(1, id);
                 ResultSet rs = pst.executeQuery();
-
                 while (rs.next()) {
                     acc = new Account(rs.getInt("accID"), rs.getString("email"), rs.getString("password"), rs.getString("fullname"), rs.getInt("role"), rs.getString("phone"), rs.getInt("status"));
                 }
 
-                if (!rs.next()) {
-                    cn.close();
-                }
+
             }
         } catch (Exception e) {
             System.out.println("erros");
@@ -115,6 +113,7 @@ public class AccountDaO {
 
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return flag;
     }
@@ -243,16 +242,16 @@ public class AccountDaO {
     }
 
     public static void main(String[] args) throws ClassNotFoundException {
-        Account b = AccountDaO.getAccountById("1");
-        System.out.println(b.toString());
-        boolean a = AccountDaO.checkAccount("test@gmail.com");
-        System.out.println(a);
-        Account c = AccountDaO.getAccountByToken("4");
-        ArrayList<Account> acc = AccountDaO.listAccounts();
-        for (Account x : acc) {
-            System.out.println(x.toString());
-        }
-        AccountDaO.insertAccounts("test", "testabc", "test", "011223344");
+//        Account b = AccountDaO.getAccountById("1");
+//        System.out.println(b.toString());
+//        boolean a = AccountDaO.checkAccount("admin@gmail.com");
+//        System.out.println(a);
+//        Account c = AccountDaO.getAccountByToken("4");
+//        ArrayList<Account> acc = AccountDaO.listAccounts();
+//        for (Account x : acc) {
+//            System.out.println(x.toString());
+//        }
+//        AccountDaO.insertAccounts("test", "testabc", "test", "011223344");
         Account d = getAccountById("11");
         System.out.println(d.toString());
     }

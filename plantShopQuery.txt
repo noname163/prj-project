@@ -42,3 +42,57 @@ OrderID int foreign key references Orders(OrderID),
 FID int foreign key references Plants(PID),
 quantity int check(quantity>=1)
 )
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+MySql query
+create database PlantShop
+GO
+use PlantShop
+GO
+create table Accounts(
+accID int not null AUTO_INCREMENT ,
+email varchar(30) unique,
+password varchar(30),
+fullname varchar(30),
+phone varchar(12),
+status int check(status =1 or status=0),
+role int check(role=1 or role=0), 
+primary key(accID)
+)
+GO
+create table Categories(
+CateID int not null AUTO_INCREMENT ,
+ primary key(CateID),
+CateName varchar(30)
+)
+GO
+create table Plants(
+PID int not null AUTO_INCREMENT ,
+primary key(PID),
+PName varchar(30),
+price int, check(price>=0),
+imgPath varchar(50),
+description text,
+status int, 
+CateID int,
+FOREIGN KEY (CateID) REFERENCES Categories(CateID)
+)
+GO
+create table Orders(
+OrderID int not null AUTO_INCREMENT ,
+ primary key(OrderID),
+OrdDate date,
+shipdate date,
+status int check(status =1 or status=2 or status=3),
+AccID int ,
+FOREIGN KEY (AccID) REFERENCES Accounts(AccID)
+)
+GO
+create table OrderDetails(
+DetailId int not null AUTO_INCREMENT ,
+primary key(DetailId),
+OrderID int,
+FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+FID int,
+FOREIGN KEY (FID) REFERENCES Plants(PID),
+quantity int check(quantity>=1)
+)
