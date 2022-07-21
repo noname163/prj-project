@@ -21,7 +21,18 @@
 - By default will have admin account with user name and password "admin" 
 
 ## Setup before run project
-
+- Depend on database you using code will have difference change in file DBUtils.java as folder datdh.utils
+- ![DBUtils code](https://github.com/noname163/prj-project/blob/main/gitImg/Screenshot%20(41).png)
+  - If you using MS SQL Server you will uncomment the code from line 17 to line 22 and 28 to 35
+  - If you using MySql you will uncomment the code from line 24 to 26 and 38 to line 47
+- Uncomment command in MacOS 'command' + '/' and in Windows are 'Ctrl' + '/'
+- Depend on your machine you will need to change port number, user name, password in code
 ## Run project 
 - Open project name "PlanShop" and run it in Nerbeans IDE  
+## Error handling
+- All erros will redirect to errosPage.jsp
+![Erros Page](https://github.com/noname163/prj-project/blob/main/gitImg/Screenshot%20(42).png)
+## Endpoints
+
+## Get
 ## This project work best on netbeans IDE using jdk8, tomcat 8 or 9, sql server 2019
