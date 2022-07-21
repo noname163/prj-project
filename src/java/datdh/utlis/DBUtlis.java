@@ -21,7 +21,8 @@ public class DBUtlis {
 //    private final String userName = "admin";
 //    private final String pass = "dat163163";
     
-//    String url = "jdbc:mysql://localhost:3306/PlantShop?useSSL=false&autoReconnect=true";
+//    String portNumber = "3306";
+//    String url = "jdbc:mysql://localhost:"+portNumber+"/PlantShop?useSSL=false&autoReconnect=true";
 //    String usernameForMySql = "root";
 //    String passwordForMySql = "root";
     public Connection getConnection() throws ClassNotFoundException, SQLException {
