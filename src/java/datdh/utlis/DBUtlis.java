@@ -14,17 +14,16 @@ import java.sql.SQLException;
  */
 public class DBUtlis {
 
-    private final String serverName = "SE150011\\DATDHSE150011";
-    private final String dbName = "PlantShop";
-    private final String portNumber = "1433";
-    private final String instance = "";
-    private final String userName = "admin";
-    private final String pass = "dat163163";
-    String url = "jdbc:mysql://localhost:3306/PlantShop?useSSL=false&autoReconnect=true";
-    String usernameForMySql = "root";
-    String passwordForMySql = "root";
-    private Connection connection;
-
+//    private final String serverName = "SE150011\\DATDHSE150011";
+//    private final String dbName = "PlantShop";
+//    private final String portNumber = "1433";
+//    private final String instance = "";
+//    private final String userName = "admin";
+//    private final String pass = "dat163163";
+    
+//    String url = "jdbc:mysql://localhost:3306/PlantShop?useSSL=false&autoReconnect=true";
+//    String usernameForMySql = "root";
+//    String passwordForMySql = "root";
     public Connection getConnection() throws ClassNotFoundException, SQLException {
 //        String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + "\\"
 //                + instance + ";databaseName=" + dbName;
@@ -36,18 +35,16 @@ public class DBUtlis {
 //        return DriverManager.getConnection(url, userName, pass);
 
    
-        
-
-        System.out.println("Connecting database...");
-
-        try ( 
-            Connection connection1 = DriverManager.getConnection(url, usernameForMySql, passwordForMySql)) {
-            System.out.println("Database connected!");
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            return connection1;
-        } catch (SQLException e) {
-            throw new IllegalStateException("Cannot connect the database!", e);
-        }
+//        System.out.println("Connecting database...");
+//
+//        try ( 
+//            Connection connection1 = DriverManager.getConnection(url, usernameForMySql, passwordForMySql)) {
+//            System.out.println("Database connected!");
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            return connection1;
+//        } catch (SQLException e) {
+//            throw new IllegalStateException("Cannot connect the database!", e);
+//        }
 
     }
 
