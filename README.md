@@ -25,7 +25,7 @@
 - ![DBUtils code](https://github.com/noname163/prj-project/blob/main/gitImg/Screenshot%20(41).png)
   - If you using MS SQL Server you will uncomment the code from line 17 to line 22 and 28 to 35
   - If you using MySql you will uncomment the code from line 24 to 26 and 38 to line 47
-- Uncomment command in MacOS 'command' + '/' and in Windows are 'Ctrl' + '/'
+- Uncomment command in MacOS `command` + `/` and in Windows are `Ctrl` + `/`
 - Depend on your machine you will need to change port number, user name, password in code
 ## Run project 
 - Open project name "PlanShop" and run it in Nerbeans IDE  
@@ -34,5 +34,49 @@
 ![Erros Page](https://github.com/noname163/prj-project/blob/main/gitImg/Screenshot%20(42).png)
 ## Endpoints
 
-## Get
+## Get/accounts
+- General 
+  - Get all account available
+  - Return: An account object similar to the one below 
+ ```
+Account{ 
+"accountID=1", "email= email@gmail.com", 
+"password= userPassword", "fullName=User full name ", 
+"role=uses role", "phone= 0983774422", "status=active"
+}
+
+```
+## Get/categories
+- General
+  - Get all categories available 
+  - Return: An categories object similar to the one below
+  ```
+  Categories{"id= 1", "categoriesName= categories Name"}
+  ```
+ ## Get /orderInfor
+ - General
+   - Get all information of order available
+   - Return: an order object similar to the one below
+```
+OrderInfor{"orderId=1", "orderDate= 12/2/2022", "shipDate= 19/2/2022", "orderStatus=1", "accId= 2"};
+
+``` 
+## Get /product
+- General 
+  - Get all product available 
+  - Return: an product object similar to the one below
+ ```
+ Product{"productId=1", "productName= plant 1", 
+ "productPrice= 10000", "productImg=/img/plant.jpg", 
+ "productDecription= plant description", "productStatus= 1", 
+ "quantity= 10", "orderDate= null", "orderId= null", 
+ "orderStatus= null", "accId= null", "cateId= 1"};
+ ``` 
+ ## Get /orderDetail
+ - General
+   - Get all order detail available
+   - Return all order detail available 
+ ```
+ orderDetail{"detailId= 1", "orderID= 2", "productId= 1", "quantity= 12"}
+ ```
 ## This project work best on netbeans IDE using jdk8, tomcat 8 or 9, sql server 2019
