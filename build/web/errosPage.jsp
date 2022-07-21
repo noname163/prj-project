@@ -12,10 +12,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Erros Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+<!--        <h1>Hello World!</h1>
         <c:forEach items="${sessionScope.order.value}" var="o">
 
             <h1>test${sessionScope.order.get("1")}</h1>
@@ -70,7 +70,9 @@
         <c:remove var="varNameTest" scope="session"/>
         <h1>${varNameTest}</h1>
         <h1>filterTest ${filterTest}</h1>
-        <h1>filterTest ${filterTest1}</h1>
+        <h1>filterTest ${filterTest1}</h1>-->
+        <h1>Look like you have some erros</h1>
+        <a href="PlantShop">Back to home</a>
         
     </body>
 </html>
