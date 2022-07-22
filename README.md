@@ -34,7 +34,7 @@
 ![Erros Page](https://github.com/noname163/prj-project/blob/main/gitImg/Screenshot%20(42).png)
 ## Endpoints
 
-## Get/accounts
+## Get /accounts
 - General 
   - Get all account available
   - Return: An account object similar to the one below 
@@ -46,7 +46,7 @@ Account{
 }
 
 ```
-## Get/categories
+## Get /categories
 - General
   - Get all categories available 
   - Return: An categories object similar to the one below
