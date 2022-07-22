@@ -28,7 +28,7 @@
 - Uncomment command in MacOS `command` + `/` and in Windows are `Ctrl` + `/`
 - Depend on your machine you will need to change port number, user name, password in code
 ## Run project 
-- Open project name "PlanShop" and run it in Nerbeans IDE  
+- Open project name "PlanShop" and run it in Netbeans IDE  
 ## Error handling
 - All erros will redirect to errosPage.jsp
 ![Erros Page](https://github.com/noname163/prj-project/blob/main/gitImg/Screenshot%20(42).png)
