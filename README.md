@@ -6,7 +6,7 @@
  - Apache Netbeans: Download netbeans version here [Netbeans download](https://netbeans.apache.org/download/index.html)
  - Database: 
    * MS SQL (recommendation): Follow instructions to install MSSql Server [Doc.Microsoft](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
-   *  MySql: Follow instruction to install MySql [MySql docs](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+   *  MySql: Follow instruction to install MySql [MySql.docs](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
  
  ## Install dependence 
  
